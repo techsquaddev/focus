@@ -34,6 +34,7 @@ import { ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import { useEffect } from "react";
 import { AuthProvider } from "./api/authContext";
+import AnimatedBackground from "./components/new/AnimatedBackground";
 
 const App = () => {
   return (
