@@ -1,0 +1,286 @@
+{
+  "openapi": "3.0.0",
+  "info": {
+    "title": "Timetable Management API",
+    "version": "1.0.0",
+    "description": "API documentation for user, timetable, session, specialization, and email routes"
+  },
+  "paths": {
+    "/users": {
+      "post": {
+        "summary": "Register user",
+        "tags": ["Users"],
+        "requestBody": { "required": true },
+        "responses": {
+          "200": {
+            "description": "User registered"
+          }
+        }
+      }
+    },
+    "/users/register": {
+      "post": {
+        "summary": "Register unverified user",
+        "tags": ["Users"],
+        "responses": {
+          "200": { "description": "Unverified user registered" }
+        }
+      }
+    },
+    "/users/login": {
+      "post": {
+        "summary": "Login user",
+        "tags": ["Users"],
+        "responses": {
+          "200": { "description": "User logged in" }
+        }
+      }
+    },
+    "/users/verify-email": {
+      "post": {
+        "summary": "Verify email",
+        "tags": ["Users"],
+        "responses": {
+          "200": { "description": "Email verified" }
+        }
+      }
+    },
+    "/users/verify-token": {
+      "post": {
+        "summary": "Verify token",
+        "tags": ["Users"],
+        "responses": {
+          "200": { "description": "Token verified" }
+        }
+      }
+    },
+    "/users/logout": {
+      "post": {
+        "summary": "Logout user",
+        "tags": ["Users"],
+        "security": [{ "bearerAuth": [] }],
+        "responses": {
+          "200": { "description": "User logged out" }
+        }
+      }
+    },
+    "/users/me": {
+      "get": {
+        "summary": "Get logged in user",
+        "tags": ["Users"],
+        "security": [{ "bearerAuth": [] }],
+        "responses": {
+          "200": { "description": "User data" }
+        }
+      }
+    },
+    "/users/{id}": {
+      "put": {
+        "summary": "Update user profile",
+        "tags": ["Users"],
+        "security": [{ "bearerAuth": [] }],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": { "type": "string" }
+          }
+        ],
+        "responses": {
+          "200": { "description": "User updated" }
+        }
+      },
+      "delete": {
+        "summary": "Delete user profile",
+        "tags": ["Users"],
+        "security": [{ "bearerAuth": [] }],
+        "responses": {
+          "200": { "description": "User deleted" }
+        }
+      }
+    },
+    "/timetables": {
+      "post": {
+        "summary": "Create timetable",
+        "tags": ["Timetables"],
+        "security": [{ "bearerAuth": [] }],
+        "responses": {
+          "200": { "description": "Timetable created" }
+        }
+      },
+      "get": {
+        "summary": "Get all timetables",
+        "tags": ["Timetables"],
+        "responses": {
+          "200": { "description": "All timetables" }
+        }
+      }
+    },
+    "/timetables/find": {
+      "post": {
+        "summary": "Find timetable",
+        "tags": ["Timetables"],
+        "responses": {
+          "200": { "description": "Timetable found" }
+        }
+      }
+    },
+    "/timetables/{timetableId}": {
+      "get": {
+        "summary": "Get specific timetable",
+        "tags": ["Timetables"],
+        "parameters": [
+          {
+            "name": "timetableId",
+            "in": "path",
+            "required": true,
+            "schema": { "type": "string" }
+          }
+        ],
+        "responses": {
+          "200": { "description": "Timetable details" }
+        }
+      },
+      "put": {
+        "summary": "Update timetable",
+        "tags": ["Timetables"],
+        "security": [{ "bearerAuth": [] }],
+        "responses": {
+          "200": { "description": "Timetable updated" }
+        }
+      },
+      "delete": {
+        "summary": "Delete timetable",
+        "tags": ["Timetables"],
+        "security": [{ "bearerAuth": [] }],
+        "responses": {
+          "200": { "description": "Timetable deleted" }
+        }
+      }
+    },
+    "/sessions/{timetableId}": {
+      "post": {
+        "summary": "Create session",
+        "tags": ["Sessions"],
+        "security": [{ "bearerAuth": [] }],
+        "responses": {
+          "200": { "description": "Session created" }
+        }
+      }
+    },
+    "/sessions": {
+      "get": {
+        "summary": "Get all sessions",
+        "tags": ["Sessions"],
+        "responses": {
+          "200": { "description": "Sessions retrieved" }
+        }
+      }
+    },
+    "/sessions/find/{timetableId}": {
+      "get": {
+        "summary": "Get all sessions by timetable ID",
+        "tags": ["Sessions"],
+        "parameters": [
+          {
+            "name": "timetableId",
+            "in": "path",
+            "required": true,
+            "schema": { "type": "string" }
+          }
+        ],
+        "responses": {
+          "200": { "description": "Sessions found" }
+        }
+      }
+    },
+    "/sessions/{sessionId}": {
+      "get": {
+        "summary": "Get specific session",
+        "tags": ["Sessions"],
+        "parameters": [
+          {
+            "name": "sessionId",
+            "in": "path",
+            "required": true,
+            "schema": { "type": "string" }
+          }
+        ],
+        "responses": {
+          "200": { "description": "Session details" }
+        }
+      },
+      "put": {
+        "summary": "Update session",
+        "tags": ["Sessions"],
+        "security": [{ "bearerAuth": [] }],
+        "responses": {
+          "200": { "description": "Session updated" }
+        }
+      },
+      "delete": {
+        "summary": "Delete session",
+        "tags": ["Sessions"],
+        "security": [{ "bearerAuth": [] }],
+        "responses": {
+          "200": { "description": "Session deleted" }
+        }
+      }
+    },
+    "/specializations/{facultyId}": {
+      "post": {
+        "summary": "Create specialization",
+        "tags": ["Specializations"],
+        "security": [{ "bearerAuth": [] }],
+        "parameters": [
+          {
+            "name": "facultyId",
+            "in": "path",
+            "required": true,
+            "schema": { "type": "string" }
+          }
+        ],
+        "responses": {
+          "200": { "description": "Specialization created" }
+        }
+      }
+    },
+    "/specializations/{specializationId}": {
+      "put": {
+        "summary": "Update specialization",
+        "tags": ["Specializations"],
+        "security": [{ "bearerAuth": [] }],
+        "responses": {
+          "200": { "description": "Specialization updated" }
+        }
+      },
+      "delete": {
+        "summary": "Delete specialization",
+        "tags": ["Specializations"],
+        "security": [{ "bearerAuth": [] }],
+        "responses": {
+          "200": { "description": "Specialization deleted" }
+        }
+      }
+    },
+    "/email/sendEmail": {
+      "post": {
+        "summary": "Send email",
+        "tags": ["Email"],
+        "responses": {
+          "200": { "description": "Email sent" }
+        }
+      }
+    }
+  },
+  "components": {
+    "securitySchemes": {
+      "bearerAuth": {
+        "type": "http",
+        "scheme": "bearer",
+        "bearerFormat": "JWT"
+      }
+    }
+  }
+}
