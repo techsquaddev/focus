@@ -7,13 +7,12 @@ const About = () => {
       <Wrapper>
         <div className="mt-10">
           <h1 className="text-center text-xl text-text font-bold md:text-2xl">
-            About SLIIT 360
+            About FOCUS
           </h1>
           <div className="mt-7 mb-4 p-5 mx-5 bg-white border-2 border-secondary rounded-3xl shadow-md">
             <p className="text-soft-text text-left text-sm md:text-base mb-8">
               <span className="font-semibold bg-secondary">
-                Welcome to SLIIT 360, an online material hub for all students at
-                SLIIT!
+                Welcome to FOCUS, Faculty of Computing Unified Scheduler!
               </span>{" "}
               <br />
             </p>
@@ -30,7 +29,7 @@ const About = () => {
             ></iframe>
 
             <p className="text-soft-text text-left text-sm md:text-base mt-8">
-              In this platform, we made it our goal to give everyone access to
+              In this platform, we made it our goal to give student access to
               user-friendly timetables as opposed to hard-to-read HTML
               schedules. In the near future, we plan to add important links and
               notices here as well.
@@ -52,8 +51,8 @@ const About = () => {
 
           <div className="p-5 mx-5 bg-white border-2 border-secondary rounded-3xl shadow-md">
             <p className="text-soft-text text-left text-sm md:text-base">
-              We warmly invite all SLIIT students to register with the system
-              and contribute to the collection of timetables. 😊
+              We warmly invite all SLIIT FOC students to register with the
+              system and contribute to the collection of timetables. 😊
             </p>
           </div>
 

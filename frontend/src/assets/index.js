@@ -9,8 +9,10 @@ import ts_logo from "./ts_logo.svg";
 import loading from "./loading.gif";
 import error404 from "./error404.png";
 import developing from "./developing.png";
+import focus from "./focus.svg";
 
 export {
+  focus,
   skeleton,
   timetableBg,
   ad,

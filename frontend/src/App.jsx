@@ -9,6 +9,7 @@ import {
 } from "react-router-dom";
 import {
   AdminRoute,
+  Background,
   DashboardLayout,
   HiddenRoute,
   MainLayout,
@@ -107,7 +108,8 @@ const Main = () => {
         </Route>
         <Route path="*" element={<NotFound />} />
       </Routes>
-      <div className="gradient" />
+      {/* <div className="gradient" /> */}
+      <Background />
     </div>
   );
 };
