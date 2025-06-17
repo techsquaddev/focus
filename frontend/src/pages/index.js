@@ -7,6 +7,7 @@ import Contact from "./Contact";
 import VerifyToken from "./VerifyToken";
 import VerifyEmail from "./VerifyEmail";
 import Register from "./Register";
+import Projects from "./Projects";
 
 // Dashboard
 import Dashboard from "./dashboard/Dashboard";
@@ -23,6 +24,7 @@ export {
   Contact,
   Login,
   Register,
+  Projects,
   VerifyToken,
   VerifyEmail,
   Timetables,

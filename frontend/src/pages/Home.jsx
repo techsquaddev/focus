@@ -53,7 +53,7 @@ const Home = () => {
                 🗓️
               </motion.div>
               <h1 className="text-2xl md:text-3xl font-bold bg-gradient-to-r from-blue-600 via-purple-600 to-indigo-600 bg-clip-text text-transparent mb-2">
-                <code> Welcome to Focus!</code>
+                <code> Welcome to FOCUS!</code>
               </h1>
             </motion.div>
 
@@ -109,7 +109,7 @@ const Home = () => {
                             repeat: Number.POSITIVE_INFINITY,
                           }}
                         >
-                          →
+                          ➡️
                         </motion.span>
                       </span>
                     </motion.button>
@@ -134,7 +134,7 @@ const Home = () => {
                     key={index}
                     initial={{ scale: 0 }}
                     animate={{ scale: 1 }}
-                    transition={{ delay: 1.2 + index * 0.1, type: "spring" }}
+                    transition={{ delay: 1 + index * 0.1, type: "spring" }}
                     className="p-2"
                   >
                     <div className="text-lg md:text-xl font-bold text-blue-600 mb-1">

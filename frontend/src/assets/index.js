@@ -9,7 +9,8 @@ import ts_logo from "./ts_logo.svg";
 import loading from "./loading.gif";
 import error404 from "./error404.png";
 import developing from "./developing.png";
-import focus from "./focus.svg";
+import focus from "./focus_logo.svg";
+import projects_ad from "./UP_Post.png";
 
 export {
   focus,
@@ -24,4 +25,5 @@ export {
   loading,
   error404,
   developing,
+  projects_ad,
 };

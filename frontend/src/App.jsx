@@ -30,6 +30,7 @@ import {
   Register,
   VerifyEmail,
   Users,
+  Projects,
 } from "./pages";
 import { ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
@@ -81,6 +82,7 @@ const Main = () => {
           <Route path="/" element={<Home />} />
           <Route path="/about" element={<About />} />
           <Route path="/contact" element={<Contact />} />
+          <Route path="/projects" element={<Projects />} />
           <Route path="/timetables/:timetableId" element={<Timetable />} />
           <Route path="/timetables/find" element={<Find />} />
           <Route path="" element={<HiddenRoute />}>
