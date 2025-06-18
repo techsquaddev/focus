@@ -9,6 +9,7 @@ import {
 } from "react-router-dom";
 import {
   AdminRoute,
+  Background,
   DashboardLayout,
   HiddenRoute,
   MainLayout,
@@ -29,11 +30,13 @@ import {
   Register,
   VerifyEmail,
   Users,
+  Projects,
 } from "./pages";
 import { ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import { useEffect } from "react";
 import { AuthProvider } from "./api/authContext";
+import AnimatedBackground from "./components/new/AnimatedBackground";
 
 const App = () => {
   return (
@@ -79,6 +82,7 @@ const Main = () => {
           <Route path="/" element={<Home />} />
           <Route path="/about" element={<About />} />
           <Route path="/contact" element={<Contact />} />
+          <Route path="/projects" element={<Projects />} />
           <Route path="/timetables/:timetableId" element={<Timetable />} />
           <Route path="/timetables/find" element={<Find />} />
           <Route path="" element={<HiddenRoute />}>
@@ -106,7 +110,8 @@ const Main = () => {
         </Route>
         <Route path="*" element={<NotFound />} />
       </Routes>
-      <div className="gradient" />
+      {/* <div className="gradient" /> */}
+      <Background />
     </div>
   );
 };

@@ -12,6 +12,7 @@ import {
   DropdownMenuItem,
 } from "@radix-ui/react-dropdown-menu";
 import { useAuth } from "@/api/authContext";
+import { focus } from "@/assets";
 
 const Navbar = () => {
   const { user, logout } = useAuth();
@@ -20,13 +21,11 @@ const Navbar = () => {
       <nav className="my-5">
         <div className="flex items-center justify-between">
           <Link to="/">
-            <div className="p-3 bg-primary rounded-xl shadow-lg">
-              <img
-                className="w-16 object-contain md:w-20"
-                src={Logo}
-                alt="logo"
-              />
-            </div>
+            <img
+              className="h-8 object-contain shadow-lg md:h-10 hover:scale-105 transition-all duration-200"
+              src={focus}
+              alt="logo"
+            />
           </Link>
 
           <div>
@@ -51,6 +50,11 @@ const Navbar = () => {
                   <Link to="/contact">
                     <DropdownMenuItem className="text-text text-sm md:text-base font-semibold p-1 px-2 py-1.5 outline-none transition-colors rounded-sm select-none cursor-pointer hover:bg-soft-gray hover:text-text">
                       <span>Contact</span>
+                    </DropdownMenuItem>
+                  </Link>
+                  <Link to="/projects">
+                    <DropdownMenuItem className="text-text text-sm md:text-base font-semibold p-1 px-2 py-1.5 outline-none transition-colors rounded-sm select-none cursor-pointer hover:bg-soft-gray hover:text-text">
+                      <span>Projects🔥</span>
                     </DropdownMenuItem>
                   </Link>
                   {user ? (

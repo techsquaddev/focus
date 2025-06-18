@@ -1,6 +1,8 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800;900&display=swap");
+
 :root {
-  --primary: #4f46e5;
-  --primary-dark: #4338ca;
+  --primary: #0455bf;
+  --primary-dark: #0349a5;
   --secondary: #0ea5e9;
   --dark: #1e293b;
   --light: #f8fafc;
@@ -19,7 +21,7 @@
 }
 
 body {
-  font-family: "Inter", sans-serif;
+  font-family: "Poppins", sans-serif;
   color: var(--dark);
   background-color: var(--light);
   line-height: 1.6;
@@ -56,6 +58,10 @@ nav {
   display: flex;
   align-items: center;
   gap: 0.5rem;
+}
+
+.logo-image {
+  width: 100px;
 }
 
 .nav-links {
