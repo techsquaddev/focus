@@ -8,8 +8,7 @@ import { isAdmin, protect } from "../middleware/auth.middleware.js";
 
 const router = express.Router();
 
-router.route("/:facultyId").post(protect, isAdmin, createSpecialization);
-
+router.post("/", protect, isAdmin, createSpecialization);
 router
   .route("/:specializationId")
   .put(protect, isAdmin, updateSpecialization)

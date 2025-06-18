@@ -5,21 +5,14 @@ export const createSpecialization = async (req, res) => {
   try {
     const { name, code } = req.body;
 
-    const newSpecialization = new Specialization({
-      name,
-      code,
-    });
-
-    // Parallel Saving
-    await Promise.all([newSpecialization.save()]);
+    const newSpecialization = await Specialization.create({ name, code });
 
     res.status(201).json(newSpecialization);
   } catch (error) {
-    console.log("Error in create specialization", error.message);
+    console.error("Create Specialization Error:", error.message);
     res.status(500).json({
       success: false,
-      message: "Error in create specialization",
-      error,
+      message: "Failed to create specialization",
     });
   }
 };
