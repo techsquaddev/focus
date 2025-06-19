@@ -10,6 +10,10 @@ module.exports = {
   prefix: "",
   theme: {
     extend: {
+      fontFamily: {
+        body: ["Poppins", "sans-serif"],
+        heading: ["Montserrat", "sans-serif"],
+      },
       colors: {
         primary: "#0455BF",
         secondary: "#F2B33D",

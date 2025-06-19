@@ -52,8 +52,8 @@ const Home = () => {
               >
                 🗓️
               </motion.div>
-              <h1 className="text-2xl md:text-3xl font-bold bg-gradient-to-r from-blue-600 via-purple-600 to-indigo-600 bg-clip-text text-transparent mb-2">
-                <code> Welcome to FOCUS!</code>
+              <h1 className="font-heading text-2xl md:text-3xl font-bold bg-gradient-to-r from-blue-600 via-purple-600 to-indigo-600 bg-clip-text text-transparent mb-2">
+                Welcome to FOCUS!
               </h1>
             </motion.div>
 
@@ -96,7 +96,7 @@ const Home = () => {
                 >
                   <Link to="/timetables/find" className="w-full max-w-md">
                     <motion.button
-                      className="w-full px-6 py-3 text-lg font-semibold bg-gradient-to-r from-blue-600 to-purple-600 text-white rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 relative overflow-hidden group"
+                      className="w-full px-6 py-3 text-lg font-semibold bg-gradient-to-r from-purple-600 to-blue-600 text-white rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 relative overflow-hidden group"
                       whileHover={{ boxShadow: "0 15px 30px rgba(0,0,0,0.15)" }}
                     >
                       <motion.div className="absolute inset-0 bg-gradient-to-r from-purple-600 to-blue-600 opacity-0 group-hover:opacity-100 transition-opacity duration-300" />

@@ -5,6 +5,7 @@ import MenuIco from "@/assets/menu.png";
 import { useState } from "react";
 import LogoutIco from "@/assets/logout.png";
 import LogoutMDIco from "@/assets/logout_md.png";
+import { focus } from "@/assets";
 
 const DashboardLayout = () => {
   const { user, logout } = useAuth();
@@ -36,14 +37,12 @@ const DashboardLayout = () => {
               className="w-8 z-10 h-8 cursor-pointer lg:hidden"
               onClick={handleClick}
             />
-            <Link to="/" className="flex justify-start">
-              <div className="p-3 bg-primary rounded-xl shadow-lg max-w-fit">
-                <img
-                  className="w-16 object-contain md:w-20"
-                  src={Logo}
-                  alt="logo"
-                />
-              </div>
+            <Link to="/">
+              <img
+                className="h-8 object-contain shadow-lg md:h-10 hover:scale-105 transition-all duration-200"
+                src={focus}
+                alt="logo"
+              />
             </Link>
           </div>
           <div
